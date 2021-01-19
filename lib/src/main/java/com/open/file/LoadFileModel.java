@@ -9,6 +9,12 @@ import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+
+/**
+ * p>@Describe:网络文件下载
+ * p>@Author:zhangshaop
+ * p>@Data:2021/1/19.
+ */
 public class LoadFileModel {
 
     public static void loadPdfFile(String url, Callback<ResponseBody> callback) {

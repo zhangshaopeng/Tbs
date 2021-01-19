@@ -24,7 +24,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * 文件预览
+ * p>@Describe:文件预览页面 调用此方法{@link #show(Context, String)} {上下文，文件地址}
+ * p>@Author:zhangshaop
+ * p>@Data:2021/1/19.
  */
 public class FileDisplayActivity extends AppCompatActivity {
     private String TAG = FileDisplayActivity.class.getName();

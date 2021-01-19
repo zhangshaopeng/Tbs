@@ -3,6 +3,11 @@ package com.open.file;
 import android.text.TextUtils;
 import android.util.Log;
 
+/**
+ * p>@Describe:log
+ * p>@Author:zhangshaop
+ * p>@Data:2021/1/18.
+ */
 public final class LogUtils {
     private static final String LOG_TAG = "log_demo";
     private static boolean DEBUG = false;

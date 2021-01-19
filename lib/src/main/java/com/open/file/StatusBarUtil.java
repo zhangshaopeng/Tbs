@@ -24,10 +24,9 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * Description：状态栏设置工具类
- *
- * @author yuanjunhui
- * @version 1.0.0 2017/8/10
+ * p>@Describe:状态栏设置工具类
+ * p>@Author:zhangshaop
+ * p>@Data:2021/1/18.
  */
 public class StatusBarUtil {
 
@@ -225,7 +224,7 @@ public class StatusBarUtil {
         } else if (type == 3) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-            }else {
+            } else {
                 activity.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
             }
         }

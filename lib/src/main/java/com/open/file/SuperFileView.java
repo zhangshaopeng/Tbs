@@ -12,6 +12,11 @@ import com.tencent.smtt.sdk.TbsReaderView;
 
 import java.io.File;
 
+/**
+ * p>@Describe:文件预览view  继承TbsReaderView来实现
+ * p>@Author:zhangshaop
+ * p>@Data:2021/1/19.
+ */
 public class SuperFileView extends FrameLayout implements TbsReaderView.ReaderCallback {
 
     private static String TAG = "SuperFileView";
@@ -52,12 +57,12 @@ public class SuperFileView extends FrameLayout implements TbsReaderView.ReaderCa
         if (mFile != null && !TextUtils.isEmpty(mFile.toString())) {
             //增加下面一句解决没有TbsReaderTemp文件夹存在导致加载文件失败
             String bsReaderTemp = "/storage/emulated/0/TbsReaderTemp";
-            File bsReaderTempFile =new File(bsReaderTemp);
+            File bsReaderTempFile = new File(bsReaderTemp);
 
             if (!bsReaderTempFile.exists()) {
                 LogUtils.d("准备创建/storage/emulated/0/TbsReaderTemp！！");
                 boolean mkdir = bsReaderTempFile.mkdir();
-                if(!mkdir){
+                if (!mkdir) {
                     LogUtils.e("创建/storage/emulated/0/TbsReaderTemp失败！！！！！");
                 }
             }
@@ -109,7 +114,7 @@ public class SuperFileView extends FrameLayout implements TbsReaderView.ReaderCa
     }
 
     public void show() {
-        if(mOnGetFilePathListener!=null){
+        if (mOnGetFilePathListener != null) {
             mOnGetFilePathListener.onGetFilePath(this);
         }
     }
