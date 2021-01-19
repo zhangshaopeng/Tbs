@@ -8,10 +8,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.open.file.FileDisplayActivity;
+import com.open.file.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        StatusBarUtil.setStatusBar(this);
+        StatusBarUtil.setStatusBarLight(this);
         initDatas();
         initPaths();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.mRecyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         mRecyclerView.setAdapter(new RecyclerView.Adapter() {
             @Override
             public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -95,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
                 path = "http://www.hrssgz.gov.cn/bgxz/sydwrybgxz/201101/P020110110748901718161.doc";
                 break;
             case 1:
-
                 path = "/storage/emulated/0/test.docx";
 
                 break;
